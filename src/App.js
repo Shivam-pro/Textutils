@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Textutils from './components/Textutils';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Alert from './components/Alert';
 
 function App() {
