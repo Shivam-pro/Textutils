@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Textutils from './components/Textutils';
 import { useState } from 'react';
 import Alert from './components/Alert';
+import { Route, Routes } from 'react-router';
+import AboutUs from './components/AboutUs';
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -88,7 +90,10 @@ function App() {
     <>
         <Navbar title="Textutils" mode={mode} toggleMode={DarkMode} glow={glowButton} handle={handleButtonClick} show={show} />
         <Alert alert={alert}/>
-        <Textutils Text={myText} showAlert={showAlert} />
+        <Routes>
+          <Route path='/' element={<Textutils Text={myText} showAlert={showAlert} />}/>
+          <Route path='/aboutus' element={<AboutUs/>}/>
+        </Routes>
     </>
   );
 }
